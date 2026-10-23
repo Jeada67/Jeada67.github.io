@@ -121,7 +121,7 @@ a {
 
 
 /* ==================================================
-   KNOPPEN EN LABELS
+   LABELS
 ================================================== */
 
 .klein-label {
@@ -142,50 +142,9 @@ a {
     color: var(--zwart);
 }
 
-.grote-knop,
-.hoofdknop {
-    width: fit-content;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 14px 21px;
-    background: var(--rijkrood);
-    color: var(--wit);
-    border: 2px solid var(--donkerrood);
-    border-radius: 13px;
-    box-shadow: 5px 5px 0 var(--donkerrood);
-    font-weight: 900;
-    transition: 0.2s ease;
-}
-
-.grote-knop:hover,
-.hoofdknop:hover {
-    transform: translate(3px, 3px);
-    box-shadow: 2px 2px 0 var(--donkerrood);
-}
-
-.menu-knoppen {
-    margin-top: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
-.tweede-knop {
-    background: var(--botergeel);
-    color: var(--zwart);
-    border-color: var(--zwart);
-    box-shadow: 5px 5px 0 var(--zwart);
-}
-
-.tweede-knop:hover {
-    box-shadow: 2px 2px 0 var(--zwart);
-}
-
 
 /* ==================================================
-   HOMEPAGE MET ALLEEN KATTEN.JPG
+   HOMEPAGE MET KATTEN.JPG
 ================================================== */
 
 .katten-banner {
@@ -232,6 +191,118 @@ a {
 
 
 /* ==================================================
+   MODERNE KNOPPEN VOOR DEEL 1 EN DEEL 2
+================================================== */
+
+.menu-knoppen {
+    margin-top: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.verhaal-knop {
+    min-width: 230px;
+    min-height: 82px;
+    padding: 15px 18px 15px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border: 3px solid var(--donkerblauw);
+    border-radius: 18px;
+    font-size: 1.08rem;
+    font-weight: 900;
+    line-height: 1.2;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.verhaal-knop small {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.deel-1-knop {
+    background: var(--rijkrood);
+    color: var(--wit);
+    box-shadow: 7px 7px 0 var(--donkerblauw);
+}
+
+.deel-2-knop {
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+    box-shadow: 7px 7px 0 var(--rijkrood);
+}
+
+.knop-pijl {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.35rem;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.deel-1-knop .knop-pijl {
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+}
+
+.deel-2-knop .knop-pijl {
+    background: var(--donkerblauw);
+    color: var(--botergeel);
+}
+
+.verhaal-knop:hover {
+    transform: translateY(-5px);
+}
+
+.deel-1-knop:hover {
+    background: var(--donkerblauw);
+    box-shadow: 7px 7px 0 var(--botergeel);
+}
+
+.deel-2-knop:hover {
+    background: var(--donkerblauw);
+    color: var(--wit);
+    box-shadow: 7px 7px 0 var(--rijkrood);
+}
+
+.verhaal-knop:hover .knop-pijl {
+    transform: translateX(4px);
+}
+
+.deel-1-knop:hover .knop-pijl {
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+}
+
+.deel-2-knop:hover .knop-pijl {
+    background: var(--rijkrood);
+    color: var(--wit);
+}
+
+.verhaal-knop:focus-visible {
+    outline: 4px solid var(--botergeel);
+    outline-offset: 5px;
+}
+
+
+/* ==================================================
    ALGEMENE SECTIETITELS
 ================================================== */
 
@@ -263,29 +334,20 @@ a {
    VERHALEN OP DE HOMEPAGE
 ================================================== */
 
-.verhalen-sectie,
 .berichten-sectie {
     padding: 105px max(20px, calc((100% - 1180px) / 2));
     background: var(--zwart);
 }
 
-.verhalen-raster {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
-}
-
-.verhaal-kaart,
 .bericht-kaart {
     padding: clamp(35px, 5vw, 55px);
     background: var(--wit);
     border: 3px solid var(--wit);
     border-radius: var(--ronde-hoek);
     box-shadow: 10px 10px 0 var(--rijkrood);
-    transition: 0.25s ease;
+    transition: transform 0.25s ease;
 }
 
-.verhaal-kaart:hover,
 .bericht-kaart:hover {
     transform: translateY(-7px);
 }
@@ -311,125 +373,159 @@ a {
 }
 
 .categorie {
-    display: inline
-/* ==================================================
-   MODERNE KNOPPEN VOOR DEEL 1 EN DEEL 2
-================================================== */
-
-.menu-knoppen {
-    margin-top: 34px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: inline-block;
+    padding: 6px 12px;
+    background: var(--rijkrood);
+    color: var(--wit);
+    border-radius: 999px;
+    font-size: 0.73rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
-.verhaal-knop {
-    min-width: 220px;
-    min-height: 82px;
-    padding: 15px 18px 15px 22px;
+.bericht-inhoud h3 {
+    color: var(--donkerblauw);
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
+.bericht-inhoud h3 a:hover {
+    color: var(--rijkrood);
+}
+
+.bericht-inhoud > p {
+    margin: 22px 0 28px;
+    color: var(--grijs);
+    font-size: 1.03rem;
+    line-height: 1.75;
+}
+
+.leesknop {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--rijkrood);
+    font-weight: 900;
+}
+
+.leesknop span {
+    transition: transform 0.2s ease;
+}
+
+.leesknop:hover span {
+    transform: translateX(7px);
+}
+
+
+/* ==================================================
+   BINNENKORT
+================================================== */
+
+.binnenkort-sectie {
+    width: min(950px, calc(100% - 40px));
+    margin: 110px auto;
+    padding: 50px;
+    background: var(--wit);
+    border: 3px solid var(--zwart);
+    border-radius: var(--ronde-hoek);
+    box-shadow: 10px 10px 0 var(--botergeel);
+    text-align: center;
+}
+
+.binnenkort-sectie h2 {
+    color: var(--diepblauw);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.08;
+}
+
+.binnenkort-sectie p {
+    max-width: 680px;
+    margin: 14px auto 0;
+    color: var(--grijs);
+    font-size: 1.04rem;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    min-height: 125px;
+    padding: 30px max(20px, calc((100% - 1180px) / 2));
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    border: 3px solid var(--donkerblauw);
-    border-radius: 18px;
-    font-size: 1.08rem;
+    gap: 20px;
+    background: var(--zwart);
+    color: var(--wit);
+    border-top: 5px solid var(--rijkrood);
+}
+
+footer p {
     font-weight: 900;
-    line-height: 1.2;
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background-color 0.25s ease,
-        color 0.25s ease;
 }
 
-.verhaal-knop small {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 0.7rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.75;
+footer span {
+    color: #c8cbd0;
+    font-size: 0.86rem;
 }
 
-/* Deel 1: rijkrood */
-.deel-1-knop {
-    background: var(--rijkrood);
-    color: var(--wit);
-    box-shadow: 7px 7px 0 var(--donkerblauw);
+
+/* ==================================================
+   TABLETS
+================================================== */
+
+@media (max-width: 900px) {
+    .katten-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .katten-afbeelding {
+        width: min(100%, 650px);
+    }
+
+    .katten-afbeelding img {
+        height: 600px;
+    }
 }
 
-/* Deel 2: botergeel */
-.deel-2-knop {
-    background: var(--botergeel);
-    color: var(--donkerblauw);
-    box-shadow: 7px 7px 0 var(--rijkrood);
-}
 
-/* Ronde pijl rechts */
-.knop-pijl {
-    width: 42px;
-    height: 42px;
-    flex: 0 0 42px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    font-size: 1.35rem;
-    transition:
-        transform 0.25s ease,
-        background-color 0.25s ease,
-        color 0.25s ease;
-}
+/* ==================================================
+   TELEFOONS
+================================================== */
 
-.deel-1-knop .knop-pijl {
-    background: var(--botergeel);
-    color: var(--donkerblauw);
-}
-
-.deel-2-knop .knop-pijl {
-    background: var(--donkerblauw);
-    color: var(--botergeel);
-}
-
-/* Effect wanneer je over de knop gaat */
-.verhaal-knop:hover {
-    transform: translateY(-5px);
-}
-
-.deel-1-knop:hover {
-    background: var(--donkerblauw);
-    box-shadow: 7px 7px 0 var(--botergeel);
-}
-
-.deel-2-knop:hover {
-    background: var(--donkerblauw);
-    color: var(--wit);
-    box-shadow: 7px 7px 0 var(--rijkrood);
-}
-
-.verhaal-knop:hover .knop-pijl {
-    transform: translateX(4px);
-}
-
-.deel-1-knop:hover .knop-pijl {
-    background: var(--botergeel);
-    color: var(--donkerblauw);
-}
-
-.deel-2-knop:hover .knop-pijl {
-    background: var(--rijkrood);
-    color: var(--wit);
-}
-
-/* Zichtbare rand bij bediening met toetsenbord */
-.verhaal-knop:focus-visible {
-    outline: 4px solid var(--botergeel);
-    outline-offset: 5px;
-}
-
-/* Opmaak voor telefoons */
 @media (max-width: 650px) {
+    .navigatie {
+        min-height: 70px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .katten-banner {
+        min-height: auto;
+        padding: 50px 0 75px;
+        gap: 45px;
+    }
+
+    .katten-afbeelding {
+        border-radius: 35px 18px;
+        box-shadow: 9px 9px 0 var(--rijkrood);
+    }
+
+    .katten-afbeelding img {
+        height: 470px;
+    }
+
+    .katten-tekst h1 {
+        font-size: 3.5rem;
+    }
+
     .menu-knoppen {
         flex-direction: column;
     }
@@ -437,5 +533,44 @@ a {
     .verhaal-knop {
         width: 100%;
         min-width: 0;
+    }
+
+    .berichten-sectie {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .bericht-kaart {
+        padding: 30px 25px;
+        box-shadow: 7px 7px 0 var(--rijkrood);
+    }
+
+    .binnenkort-sectie {
+        margin: 70px auto;
+        padding: 40px 25px;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* ==================================================
+   MINDER BEWEGING
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }

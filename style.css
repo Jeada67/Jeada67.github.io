@@ -1151,3 +1151,11 @@ footer span {
 .tweede-knop:hover {
     background: #d97706;
 }
+.hero-foto {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}

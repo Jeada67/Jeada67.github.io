@@ -948,3 +948,29 @@ footer span {
         width: 100%;
     }
 }
+/* Zorg dat het volledige verhaal zichtbaar blijft */
+.verhaal-artikel {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+.verhaal-tekst {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+}
+
+.verhaal-tekst p,
+.verhaal-tekst blockquote,
+.verhaal-slot {
+    display: block;
+}
+
+.verhaal-slot p {
+    margin-top: 14px;
+}
+
+.verhaal-slot p + p {
+    margin-top: 12px;
+}

@@ -1207,6 +1207,101 @@ footer span {
         margin-top: 40px;
     }
 }
+/* Kattenfoto op de beginpagina */
+.katten-banner {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 80px 0 95px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.katten-afbeelding {
+    overflow: hidden;
+    background: var(--donkerblauw);
+    border: 4px solid var(--zwart);
+    border-radius: 55px 22px;
+    box-shadow: 14px 14px 0 var(--rijkrood);
+}
+
+.katten-afbeelding img {
+    width: 100%;
+    height: 560px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.katten-tekst h1 {
+    margin-bottom: 25px;
+    color: var(--diepblauw);
+    font-size: clamp(3.3rem, 7vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+}
+
+.katten-tekst p {
+    max-width: 590px;
+    margin-bottom: 32px;
+    color: var(--grijs);
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.menu-knoppen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.tweede-knop {
+    background: var(--botergeel);
+    color: var(--zwart);
+    border-color: var(--zwart);
+    box-shadow: 5px 5px 0 var(--zwart);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .katten-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .katten-afbeelding img {
+        height: 500px;
+    }
+}
+
+/* Telefoon */
+@media (max-width: 650px) {
+    .katten-banner {
+        padding: 50px 0 70px;
+        gap: 45px;
+    }
+
+    .katten-afbeelding {
+        border-radius: 35px 18px;
+        box-shadow: 9px 9px 0 var(--rijkrood);
+    }
+
+    .katten-afbeelding img {
+        height: 430px;
+    }
+
+    .katten-tekst h1 {
+        font-size: 3.5rem;
+    }
+
+    .menu-knoppen {
+        flex-direction: column;
+    }
+
+    .menu-knoppen .hoofdknop {
+        width: 100%;
+    }
+}
     margin: 20px auto;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);

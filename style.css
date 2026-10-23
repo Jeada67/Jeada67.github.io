@@ -974,3 +974,105 @@ footer span {
 .verhaal-slot p + p {
     margin-top: 12px;
 }
+/* ==================================================
+   KNOPPEN NAAR DEEL 1 EN DEEL 2
+================================================== */
+
+.menu-knoppen {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.deel-knop {
+    min-width: 205px;
+    padding: 16px 18px 16px 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    border: 3px solid var(--donkerblauw);
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+/* Deel 1 is rijkrood */
+.deel-1-knop {
+    background: var(--rijkrood);
+    color: var(--wit);
+    box-shadow: 7px 7px 0 var(--donkerblauw);
+}
+
+/* Deel 2 is botergeel */
+.deel-2-knop {
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+    box-shadow: 7px 7px 0 var(--rijkrood);
+}
+
+.deel-knop-pijl {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+.deel-1-knop .deel-knop-pijl {
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+}
+
+.deel-2-knop .deel-knop-pijl {
+    background: var(--donkerblauw);
+    color: var(--botergeel);
+}
+
+.deel-knop:hover {
+    transform: translateY(-5px);
+}
+
+.deel-1-knop:hover {
+    background: var(--donkerblauw);
+    box-shadow: 7px 7px 0 var(--rijkrood);
+}
+
+.deel-2-knop:hover {
+    background: var(--donkerblauw);
+    color: var(--wit);
+    box-shadow: 7px 7px 0 var(--botergeel);
+}
+
+.deel-knop:hover .deel-knop-pijl {
+    transform: translateX(5px);
+}
+
+.deel-knop:focus-visible {
+    outline: 4px solid var(--botergeel);
+    outline-offset: 5px;
+}
+
+/* Mobiele weergave */
+@media (max-width: 650px) {
+    .menu-knoppen {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .deel-knop {
+        width: 100%;
+        min-width: 0;
+    }
+}

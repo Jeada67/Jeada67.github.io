@@ -312,3 +312,130 @@ a {
 
 .categorie {
     display: inline
+/* ==================================================
+   MODERNE KNOPPEN VOOR DEEL 1 EN DEEL 2
+================================================== */
+
+.menu-knoppen {
+    margin-top: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.verhaal-knop {
+    min-width: 220px;
+    min-height: 82px;
+    padding: 15px 18px 15px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border: 3px solid var(--donkerblauw);
+    border-radius: 18px;
+    font-size: 1.08rem;
+    font-weight: 900;
+    line-height: 1.2;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.verhaal-knop small {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+/* Deel 1: rijkrood */
+.deel-1-knop {
+    background: var(--rijkrood);
+    color: var(--wit);
+    box-shadow: 7px 7px 0 var(--donkerblauw);
+}
+
+/* Deel 2: botergeel */
+.deel-2-knop {
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+    box-shadow: 7px 7px 0 var(--rijkrood);
+}
+
+/* Ronde pijl rechts */
+.knop-pijl {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.35rem;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.deel-1-knop .knop-pijl {
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+}
+
+.deel-2-knop .knop-pijl {
+    background: var(--donkerblauw);
+    color: var(--botergeel);
+}
+
+/* Effect wanneer je over de knop gaat */
+.verhaal-knop:hover {
+    transform: translateY(-5px);
+}
+
+.deel-1-knop:hover {
+    background: var(--donkerblauw);
+    box-shadow: 7px 7px 0 var(--botergeel);
+}
+
+.deel-2-knop:hover {
+    background: var(--donkerblauw);
+    color: var(--wit);
+    box-shadow: 7px 7px 0 var(--rijkrood);
+}
+
+.verhaal-knop:hover .knop-pijl {
+    transform: translateX(4px);
+}
+
+.deel-1-knop:hover .knop-pijl {
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+}
+
+.deel-2-knop:hover .knop-pijl {
+    background: var(--rijkrood);
+    color: var(--wit);
+}
+
+/* Zichtbare rand bij bediening met toetsenbord */
+.verhaal-knop:focus-visible {
+    outline: 4px solid var(--botergeel);
+    outline-offset: 5px;
+}
+
+/* Opmaak voor telefoons */
+@media (max-width: 650px) {
+    .menu-knoppen {
+        flex-direction: column;
+    }
+
+    .verhaal-knop {
+        width: 100%;
+        min-width: 0;
+    }
+}

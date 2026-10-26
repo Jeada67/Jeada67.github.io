@@ -1076,3 +1076,47 @@ footer span {
         min-width: 0;
     }
 }
+/* Klein kopje boven Deel 2 */
+.vervolg-kopje {
+    margin: 65px 0 25px;
+}
+
+.vervolg-kopje span {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 7px 13px;
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.vervolg-kopje h3 {
+    color: var(--wit);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    line-height: 1.15;
+}
+
+/* Deel 2 krijgt botergele details */
+.tweede-bericht {
+    box-shadow: 10px 10px 0 var(--botergeel);
+}
+
+.tweede-bericht .categorie {
+    background: var(--botergeel);
+    color: var(--donkerblauw);
+}
+
+/* Mobiele weergave */
+@media (max-width: 650px) {
+    .vervolg-kopje {
+        margin-top: 45px;
+    }
+
+    .tweede-bericht {
+        box-shadow: 7px 7px 0 var(--botergeel);
+    }
+}

@@ -1166,3 +1166,49 @@ footer span {
         font-size: 1.08rem;
     }
 }
+/* ==================================================
+   DE WACHTWOORDWIJZIGING
+================================================== */
+
+/* Gewone computermelding */
+.systeem-melding {
+    margin: 22px 0 28px;
+    color: var(--donkerblauw);
+    font-size: 1.08rem;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+/* Gekleurde uitspraak van Daan */
+.daan-citaat {
+    margin: 38px 0;
+    padding: 24px 28px;
+    background: var(--lichtgeel);
+    color: var(--donkerrood);
+    border-left: 8px solid var(--rijkrood);
+    border-radius: 0 18px 18px 0;
+    box-shadow: 6px 6px 0 rgba(165, 31, 50, 0.14);
+    font-size: 1.22rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+/* Blauwe variant */
+.daan-citaat.blauw-citaat {
+    background: #e6f0f8;
+    color: var(--donkerblauw);
+    border-left-color: var(--donkerblauw);
+    box-shadow: 6px 6px 0 rgba(16, 47, 80, 0.14);
+}
+
+@media (max-width: 650px) {
+    .systeem-melding {
+        font-size: 1rem;
+    }
+
+    .daan-citaat {
+        margin: 30px 0;
+        padding: 20px;
+        font-size: 1.08rem;
+    }
+}

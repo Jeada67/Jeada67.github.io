@@ -1274,12 +1274,13 @@ footer span {
   margin: 0 auto 35px 0;
 }
 
-/* Tweede afbeelding rechtsonder */
 .afbeelding-rechtsonder {
-  width: 230px;
-  margin: 40px 0 0 auto;
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  margin: 40px auto;
 }
-
 /* Afbeeldingen passend maken op telefoons */
 @media (max-width: 600px) {
   .afbeelding-linksboven,

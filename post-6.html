@@ -1,81 +1,146 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3 Mannen op Straat</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=14">
 </head>
 
 <body>
 
-<header class="site-header">
-    <nav class="navigatie">
-        <a class="logo" href="index.html">
-            <span class="logo-icoon">😂</span>
-            <span>Grappige berichten</span>
+    <header class="site-header">
+        <nav class="navigatie">
+
+            <a class="logo" href="index.html">
+                <span class="logo-icoon">😂</span>
+                <span>Grappige berichten</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="post-1.html">Deel 1</a>
+                <a href="post-2.html">Deel 2</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="verhaal-pagina">
+
+        <a class="terug-naar-home" href="index.html">
+            <span aria-hidden="true">←</span>
+            Terug naar de homepage
         </a>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-        </div>
-    </nav>
-</header>
+        <article class="verhaal-artikel">
 
-<main class="post-container">
+            <header class="verhaal-header">
 
-    <a href="index.html" class="terug-link">
-        ← Terug naar de homepage
-    </a>
+                <div class="verhaal-labels">
+                    <span class="hoofdstuk-label">Nieuw verhaal</span>
+                    <span class="leestijd-label">1 minuut lezen</span>
+                </div>
 
-    <article class="post">
+                <p class="verhaal-bovenregel">
+                    Een korte grap met een onverwachte afloop
+                </p>
 
-        <div class="post-header">
-            <span class="categorie">Nieuw verhaal</span>
-            <span class="leestijd">1 minuut lezen</span>
+                <h1>3 Mannen op Straat</h1>
 
-            <h1>3 Mannen op Straat</h1>
+                <p class="verhaal-intro">
+                    Drie mannen lopen samen over straat en vertellen wat zij doen.
+                    De laatste man blijkt iets heel anders verstaan te hebben.
+                </p>
 
-            <p>
-                Een kort verhaal met een onverwachte afloop.
-            </p>
-        </div>
+            </header>
 
-        <div class="post-content">
-
-            <p class="normale-tekst">
-                Er lopen 3 mannen op straat.
-            </p>
-
-            <p class="normale-tekst">
-                Zegt de een:
-            </p>
-
-            <div class="quote-box blauw">
-                ik ben hetero en ik doe het met vrouwen.
+            <div class="verhaal-scheiding">
+                <span aria-hidden="true">🚶</span>
+                <span aria-hidden="true">+</span>
+                <span aria-hidden="true">🚶</span>
+                <span aria-hidden="true">= ?</span>
             </div>
 
-            <p class="normale-tekst">
-                Zegt de tweede man:
-            </p>
+            <div class="verhaal-tekst">
 
-            <div class="quote-box geel">
-                ik ben homo en ik doe het met mannen.
+                <p>
+                    Er lopen 3 mannen op straat.
+                </p>
+
+                <p>
+                    Zegt de een:
+                </p>
+
+                <blockquote class="tom-citaat blauw-citaat">
+                    “Ik ben hetero en ik doe het met vrouwen.”
+                </blockquote>
+
+                <p>
+                    Zegt de tweede man:
+                </p>
+
+                <blockquote class="tom-citaat">
+                    “Ik ben homo en ik doe het met mannen.”
+                </blockquote>
+
+                <p>
+                    Zegt de laatste:
+                </p>
+
+                <blockquote class="tom-citaat blauw-citaat">
+                    “Ik ben hobo en ik doe het zelf!”
+                </blockquote>
+
+                <div class="verhaal-slot">
+
+                    <span class="slot-label">Einde</span>
+
+                    <h2>Dat ging anders dan verwacht</h2>
+
+                    <p>
+                        Soms hoeft een grap niet lang te zijn.
+                        Eén verkeerd verstaan woord kan al genoeg zijn.
+                    </p>
+
+                </div>
+
             </div>
 
-            <p class="normale-tekst">
-                Zegt de laatste:
-            </p>
+        </article>
 
-            <div class="quote-box blauw">
-                ik ben hobo en ik doe het zelf!
+        <section class="volgend-hoofdstuk terug-hoofdstuk">
+
+            <div>
+                <span class="volgend-label">Nog een verhaal lezen?</span>
+
+                <h2>Een verfijnde smaak</h2>
+
+                <p>
+                    Tom belandt tussen echte wijnkenners en weet
+                    iedereen te imponeren met verrassend simpele antwoorden.
+                </p>
             </div>
 
-        </div>
+            <a class="hoofdstuk-knop" href="post-5.html">
+                <span class="hoofdstuk-pijl" aria-hidden="true">←</span>
 
-    </article>
+                <span>
+                    <small>Vorig verhaal</small>
+                    Lees het verhaal
+                </span>
+            </a>
 
-</main>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Grappige berichten, voor als je even wilt lachen.</p>
+        <span>© 2026 Grappige berichten</span>
+    </footer>
 
 </body>
+
 </html>
